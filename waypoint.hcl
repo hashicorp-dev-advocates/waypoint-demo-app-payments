@@ -6,13 +6,14 @@ runner {
 
 app "payments-deployment" {
   build {
-    use "docker-pull" {
-      image              = "nicholasjackson/fake-service"
-      tag                = "v0.23.1"
-      disable_entrypoint = true
-    }
+    use "docker" {}
 
-    registry {}
+    registry {
+      use "docker" {
+        image = "10.5.0.100/hashicraft/payments"
+        tag   = "latest"
+      }
+    }
   }
 
   deploy {
