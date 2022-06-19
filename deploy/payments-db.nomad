@@ -41,11 +41,6 @@ job "payments-database" {
         POSTGRES_PASSWORD = "password"
         POSTGRES_DB       = "payments"
       }
-
-      resources {
-        cpu    = 500 # MHz
-        memory = 128 # MB
-      }
     }
   }
 }

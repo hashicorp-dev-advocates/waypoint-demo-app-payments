@@ -63,11 +63,6 @@ job "payments-deployment" {
         NAME                 = "PAYMENTS V1"
         TIMING_50_PERCENTILE = "20ms"
       }
-
-      resources {
-        cpu    = 500 # MHz
-        memory = 128 # MB
-      }
     }
 
     # envoy is bound to ip 127.0.0.2 however expose only accepts redirects to 127.0.0.1
