@@ -7,17 +7,18 @@ runner {
 app "payments-deployment" {
   build {
     use "docker-pull" {
-      image = "nicholasjackson/fake-service"
-      tag   = "v0.23.1"
+      image              = "nicholasjackson/fake-service"
+      tag                = "v0.23.1"
+      disable_entrypoint = true
     }
+
+    registry {}
   }
 
   deploy {
     use "nomad-jobspec" {
       jobspec = templatefile("${path.app}/deploy/payments.nomad")
     }
-
-    registry {}
   }
 
   release {}
