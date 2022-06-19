@@ -66,7 +66,7 @@ job "payments-deployment" {
 
       resources {
         cpu    = 500 # MHz
-        memory = 512 # MB
+        memory = 256 # MB
       }
     }
 
