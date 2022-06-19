@@ -12,12 +12,7 @@ app "payments-deployment" {
       disable_entrypoint = true
     }
 
-    registry {
-      use "docker" {
-        image = "10.5.0.100/hashicraft/payments"
-        tag   = "latest"
-      }
-    }
+    registry {}
   }
 
   deploy {
