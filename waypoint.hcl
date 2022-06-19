@@ -11,8 +11,6 @@ app "payments-deployment" {
       tag                = "v0.23.1"
       disable_entrypoint = true
     }
-
-    registry {}
   }
 
   deploy {
