@@ -16,6 +16,8 @@ app "payments-deployment" {
     use "nomad-jobspec" {
       jobspec = templatefile("${path.app}/deploy/payments.nomad")
     }
+
+    registry {}
   }
 
   release {}
