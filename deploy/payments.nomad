@@ -41,6 +41,11 @@ job "payments-deployment" {
             config {
               envoy_prometheus_bind_addr = "0.0.0.0:9102"
             }
+            
+            upstreams {
+              destination_name = "waypoint-grpc"
+              local_bind_port = 9703
+            }
           }
         }
       }
